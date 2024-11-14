@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Nhập tài khoản VietNamNet ID</title>
+    <link rel="stylesheet" href="/css/demo2.css">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <style>
+        iframe.mfp-iframe .vnnid-loginv2 .login-page-inner {
+            margin: 30px auto;
+            border: none;
+            box-shadow: unset;
+        }
+
+        /* Style cho thông báo lỗi */
+        .text-danger {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="/css/style.css">
+<!-- Đường dẫn chỉ tới file style.css -->
+<header class="header vnn-header">
+<div class="container">
+    <div class="container__left">
+        <button type="button" title="Menu" class="container__left-item header__hamburger btn-hamburger">
+            <span class="icon-hamburger"></span>
+        </button>
+
+            <h1 class="header__logo container__left-item">
+                <a href="./index.html" title="vietnamnet">
+                    <img width="140" src="https://static.vnncdn.net/v1/logo/logoVietnamNet.svg" alt="VietNamNet">
+                    <!-- Logo lấy từ link trang web chính cho đỡ tốn bộ nhớ -->
+                </a>
+            </h1>
+            <div class="header__clock">
+                <span class="header__clock-content" id="clock">
+                </span>
+                <a href="" class="header__clock-link">
+                    Xem lịch vạn niên
+                </a>
+            </div>
+            <script src="/js/clock.js"></script>
+           
+    
+    </div>
+    <div class="container__right">
+        <ul class="header__outstanding">
+            <li class="header__outstanding-item">
+                <a title="Tin tức 24h" href="">Tin tức 24h</a>
+            </li>
+            <li class="header__outstanding-item">
+                <a href="" title="podcast">
+                    Podcast
+                </a>
+            </li>
+            <li class="header__outstanding-item">
+                <a title="Tuần Việt Nam" href="">Tuần Việt Nam</a>
+            </li>
+            <li class="header__outstanding-item">
+               <a title="Vietnamnet premium" href="">
+                    <img style="width:89px;" src="https://vnn-res.vgcloud.vn/ResV9/images/vpremium-menu-logo.svg" alt="Vietnamnet premium">
+                </a>
+            </li>
+            <!-- vietnamnet global -->
+            <li class="header__outstanding-item">
+               <a title="Vietnamnet global" href="">
+                    <img style="width:70px;" src="https://static.vnncdn.net/v1/icon/VietnamNet_bridge.svg" alt="Vietnamnet global">
+                </a>
+            </li>
+            <li class="header__outstanding-item" id="vnnid-topbar">
+                <a href="./dangnhap.html" class="vnnclientid-login-wrapper vnn__login-btn"> 
+<span class="vnnclientid-login-text" >
+    Đăng nhập</span>
+<img class="vnnclientid-login-logo" src="https://static.vnncdn.net/v1/icon/login.svg" alt="login vietnamnet">
+</button></li>
+        </ul>
+        <div class="header__search">
+            <button type="button" class="btn-search">
+                <span class="icon-search"></span>
+            </button>
+        </div>
+        <div class="form-box">
+            <form method="get" action="" class="form__wrapper">
+                <input class="input__search" name="q" type="text" placeholder="Tìm kiếm ...">
+                <button type="submit" class="btn__search">
+                    <img src="https://static.vnncdn.net/v1/icon/icon-search.svg">
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</header>
+<body>
+<body class="wrapNav nav-warpper togglePinTop ">
+<!-- BEGIN COMPONENT:: COMPONENT002464 -->
+
+<nav class="mainNav swiper">
+<ul class="mainNav__list swiper-wrapper">
+    <li class="mainNav__list-item swiper-slide no-action">
+        <a class="btn-home" href="./index.html" title="VietNamNet">
+            <span class="icon-home"></span>
+        </a>
+    </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Chính trị" href="../BTL/LeAnhPha.html/ChinhTri.html">
+                        Chính trị
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Sự kiện" href="../BTL/LeAnhPha.html/ChinhTri.html" >Sự kiện</a>
+                                </li>
+                                <li>
+                                    <a title="Xây dựng đảng" href="../BTL/LeAnhPha.html/ChinhTri.html" >Xây dựng đảng</a>
+                                </li>
+                                <li>
+                                    <a title="Đối ngoại" href="../BTL/LeAnhPha.html/ChinhTri.html" >Đối ngoại</a>
+                                </li>
+                                <li>
+                                    <a title="Bàn luận" href="../BTL/LeAnhPha.html/ChinhTri.html" >Bàn luận</a>
+                                </li>
+                                <li>
+                                    <a title="Kỷ nguyên mới của dân tộc" href="../BTL/LeAnhPha.html/ChinhTri.html" >Kỷ nguyên mới của dân tộc</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Thời sự" href="../BTL/LeAnhPha.html/ThoiSu.html" >
+                        Thời sự
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Quốc hội" href="../BTL/LeAnhPha.html/ThoiSu.html" >Quốc hội</a>
+                                </li>
+                                <li>
+                                    <a title="An toàn giao thông" href="../BTL/LeAnhPha.html/ThoiSu.html" >An toàn giao thông</a>
+                                </li>
+                                <li>
+                                    <a title="Môi trường" href="../BTL/LeAnhPha.html/ThoiSu.html" >Môi trường</a>
+                                </li>
+                                <li>
+                                    <a title="BHXH-BHYT" href="../BTL/LeAnhPha.html/ThoiSu.html" >BHXH-BHYT</a>
+                                </li>
+                                <li>
+                                    <a title="Chống tham nhũng" href="../BTL/LeAnhPha.html/ThoiSu.html" >Chống tham nhũng</a>
+                                </li>
+                                <li>
+                                    <a title="Quốc phòng" href="../BTL/LeAnhPha.html/ThoiSu.html" >Quốc phòng</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Kinh doanh" href="../BTL/LeAnhPha.html/KinhDoanh.html" >
+                        Kinh doanh
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Net Zero" href="../BTL/LeAnhPha.html/KinhDoanh.html" >Net Zero</a>
+                                </li>
+                                <li>
+                                    <a title="Tài chính" href="../BTL/LeAnhPha.html/KinhDoanh.html" >Tài chính</a>
+                                </li>
+                                <li>
+                                    <a title="Đầu tư" href="../BTL/LeAnhPha.html/KinhDoanh.html" >Đầu tư</a>
+                                </li>
+                                <li>
+                                    <a title="Thị trường" href="../BTL/LeAnhPha.html/KinhDoanh.html" >Thị trường</a>
+                                </li>
+                                <li>
+                                    <a title="Doanh nhân" href="../BTL/LeAnhPha.html/KinhDoanh.html" >Doanh nhân</a>
+                                </li>
+                                <li>
+                                    <a title="Tư vấn tài chính" href="../BTL/LeAnhPha.html/KinhDoanh.html" >Tư vấn tài chính</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Thể thao" href="../BTL/LeAnhPha.html/TheThao.html" >
+                        Thể thao
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Bóng đá Việt Nam" href="../BTL/LeAnhPha.html/TheThao.html" >Bóng đá Việt Nam</a>
+                                </li>
+                                <li>
+                                    <a title="Bóng đá quốc tế" href="../BTL/LeAnhPha.html/TheThao.html" >Bóng đá quốc tế</a>
+                                </li>
+                                <li>
+                                    <a title="Hậu trường" href="../BTL/LeAnhPha.html/TheThao.html" >Hậu trường</a>
+                                </li>
+                                <li>
+                                    <a title="Các môn khác" href="../BTL/LeAnhPha.html/TheThao.html" >Các môn khác</a>
+                                </li>
+                                <li>
+                                    <a title="Tường thuật trực tiếp" href="../BTL/LeAnhPha.html/TheThao.html" >Tường thuật trực tiếp</a>
+                                </li>
+                                <li>
+                                    <a title="Dữ liệu bóng đá" href="../BTL/LeAnhPha.html/TheThao.html" >Dữ liệu bóng đá</a>
+                                </li>
+                                <li>
+                                    <a title="Tin chuyển nhượng" href="../BTL/LeAnhPha.html/TheThao.html" >Tin chuyển nhượng</a>
+                                </li>
+                                <li>
+                                    <a title="Video thể thao" href="../BTL/LeAnhPha.html/TheThao.html" >Video thể thao</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Thế giới" href="../BTL/LeAnhPha.html/TheGioi.html" >
+                        Thế giới
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Bình luận quốc tế" href="../BTL/LeAnhPha.html/TheGioi.html" >Bình luận quốc tế</a>
+                                </li>
+                                <li>
+                                    <a title="Chân dung" href="../BTL/LeAnhPha.html/TheGioi.html" >Chân dung</a>
+                                </li>
+                                <li>
+                                    <a title="Hồ sơ" href="../BTL/LeAnhPha.html/TheGioi.html" >Hồ sơ</a>
+                                </li>
+                                <li>
+                                    <a title="Thế giới đó đây" href="../BTL/LeAnhPha.html/TheGioi.html" >Thế giới đó đây</a>
+                                </li>
+                                <li>
+                                    <a title="Việt Nam và thế giới" href="../BTL/LeAnhPha.html/TheGioi.html" >Việt Nam và thế giới</a>
+                                </li>
+                                <li>
+                                    <a title="Quân sự" href="../BTL/LeAnhPha.html/TheGioi.html" >Quân sự</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Giáo dục" href="../BTL/LeAnhPha.html/GiaoDuc.html" >
+                        Giáo dục
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Nhà trường" href="../BTL/LeAnhPha.html/GiaoDuc.html" >Nhà trường</a>
+                                </li>
+                                <li>
+                                    <a title="Chân dung" href="../BTL/LeAnhPha.html/GiaoDuc.html" >Chân dung</a>
+                                </li>
+                                <li>
+                                    <a title="Góc phụ huynh" href="../BTL/LeAnhPha.html/GiaoDuc.html" >Góc phụ huynh</a>
+                                </li>
+                                <li>
+                                    <a title="Tuyển sinh " href="../BTL/LeAnhPha.html/GiaoDuc.html" >Tuyển sinh </a>
+                                </li>
+                                <li>
+                                    <a title="Du học" href="../BTL/LeAnhPha.html/GiaoDuc.html" >Du học</a>
+                                </li>
+                                <li>
+                                    <a title="Học Tiếng Anh" href="../BTL/LeAnhPha.html/GiaoDuc.html" >Học Tiếng Anh</a>
+                                </li>
+                                <li>
+                                    <a title="Trắc nghiệm" href="../BTL/LeAnhPha.html/GiaoDuc.html" >Trắc nghiệm</a>
+                                </li>
+                                <li>
+                                    <a title="Khoa học" href="../BTL/LeAnhPha.html/GiaoDuc.html" >Khoa học</a>
+                                </li>
+                                <li>
+                                    <a title="AI CONTEST 2024" href="../BTL/LeAnhPha.html/GiaoDuc.html" >AI CONTEST 2024</a>
+                                </li>
+                                <li>
+                                    <a title="Tin tức việc làm" href="../BTL/LeAnhPha.html/GiaoDuc.html" >Tin tức việc làm</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Giải trí" href="../BTL/LeAnhPha.html/GiaiTri.html" >
+                        Giải trí
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Thế giới sao" href="../BTL/LeAnhPha.html/GiaiTri.html" >Thế giới sao</a>
+                                </li>
+                                <li>
+                                    <a title="Hoa hậu" href="/../BTL/LeAnhPha.html/GiaiTri.html" >Hoa hậu</a>
+                                </li>
+                                <li>
+                                    <a title="Thời trang" href="../BTL/LeAnhPha.html/GiaiTri.html" >Thời trang</a>
+                                </li>
+                                <li>
+                                    <a title="Nhạc" href="../BTL/LeAnhPha.html/GiaiTri.html" >Nhạc</a>
+                                </li>
+                                <li>
+                                    <a title="Phim" href="../BTL/LeAnhPha.html/GiaiTri.html" >Phim</a>
+                                </li>
+                                <li>
+                                    <a title="Truyền hình" href="../BTL/LeAnhPha.html/GiaiTri.html" >Truyền hình</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Văn hóa" href="../BTL/LeAnhPha.html/VanHoa.html" >
+                        Văn hóa
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Sách" href="../BTL/LeAnhPha.html/VanHoa.html" >Sách</a>
+                                </li>
+                                <li>
+                                    <a title="Di sản" href="../BTL/LeAnhPha.html/VanHoa.html" >Di sản</a>
+                                </li>
+                                <li>
+                                    <a title="Mỹ thuật - Sân khấu" href="../BTL/LeAnhPha.html/VanHoa.html" >Mỹ thuật - Sân khấu</a>
+                                </li>
+                                <li>
+                                    <a title="UNESCO" href="../BTL/LeAnhPha.html/VanHoa.html" >UNESCO</a>
+                                </li>
+                                <li>
+                                    <a title="Điều Còn Mãi" href="../BTL/LeAnhPha.html/VanHoa.html" >Điều Còn Mãi</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+                <li class="mainNav__list-item swiper-slide display-mobile">
+                    <a title="Tuần Việt Nam" href="" >
+                        Tuần Việt Nam
+                    </a>
+                </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Đời sống" href="../BTL/LeAnhPha.html/DoiSong.html" >
+                        Đời sống
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Gia đình" href="../BTL/LeAnhPha.html/DoiSong.html" >Gia đình</a>
+                                </li>
+                                <li>
+                                    <a title="Chuyện lạ" href="../BTL/LeAnhPha.html/DoiSong.html" >Chuyện lạ</a>
+                                </li>
+                                <li>
+                                    <a title="Ẩm thực" href="../BTL/LeAnhPha.html/DoiSong.html" >Ẩm thực</a>
+                                </li>
+                                <li>
+                                    <a title="Giới trẻ" href="../BTL/LeAnhPha.html/DoiSong.html" >Giới trẻ</a>
+                                </li>
+                                <li>
+                                    <a title="Mẹo vặt" href="../BTL/LeAnhPha.html/DoiSong.html" >Mẹo vặt</a>
+                                </li>
+                                <li>
+                                    <a title="Tâm sự" href="../BTL/LeAnhPha.html/DoiSong.html" >Tâm sự</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Sức khỏe" href="../BTL/LeAnhPha.html/SucKhoe.html" >
+                        Sức khỏe
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Tin tức" href="../BTL/LeAnhPha.html/SucKhoe.html" >Tin tức</a>
+                                </li>
+                                <li>
+                                    <a title="Làm đẹp" href="../BTL/LeAnhPha.html/SucKhoe.html" >Làm đẹp</a>
+                                </li>
+                                <li>
+                                    <a title="Tư vấn sức khỏe" href="../BTL/LeAnhPha.html/SucKhoe.html" >Tư vấn sức khỏe</a>
+                                </li>
+                                <li>
+                                    <a title="Đàn ông" href="../BTL/LeAnhPha.html/SucKhoe.html" >Đàn ông</a>
+                                </li>
+                                <li>
+                                    <a title="Các loại bệnh" href="../BTL/LeAnhPha.html/SucKhoe.html" >Các loại bệnh</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Thông tin và Truyền thông" href="../BTL/LeAnhPha.html/ThongTin&TruyenThong.html" >
+                        Thông tin và Truyền thông
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Toàn văn của Bộ trưởng" href="../BTL/LeAnhPha.html/ThongTin&TruyenThong.html" >Toàn văn của Bộ trưởng</a>
+                                </li>
+                                <li>
+                                    <a title="Chuyển đổi số" href="../BTL/LeAnhPha.html/ThongTin&TruyenThong.html" >Chuyển đổi số</a>
+                                </li>
+                                <li>
+                                    <a title="An toàn thông tin" href="../BTL/LeAnhPha.html/ThongTin&TruyenThong.html" >An toàn thông tin</a>
+                                </li>
+                                <li>
+                                    <a title="Hạ tầng số" href="../BTL/LeAnhPha.html/ThongTin&TruyenThong.html" >Hạ tầng số</a>
+                                </li>
+                                <li>
+                                    <a title="Kinh tế số" href="../BTL/LeAnhPha.html/ThongTin&TruyenThong.html" >Kinh tế số</a>
+                                </li>
+                                <li>
+                                    <a title="Báo chí - Xuất bản" href="../BTL/LeAnhPha.html/ThongTin&TruyenThong.html" >Báo chí - Xuất bản</a>
+                                </li>
+                                <li>
+                                    <a title="Thị trường" href="../BTL/LeAnhPha.html/ThongTin&TruyenThong.html" >Thị trường</a>
+                                </li>
+                                <li>
+                                    <a title="Công nghệ" href="../BTL/LeAnhPha.html/ThongTin&TruyenThong.html" >Công nghệ</a>
+                                </li>
+                                <li>
+                                    <a title="Xử phạt vi phạm hành chính" href="../BTL/LeAnhPha.html/ThongTin&TruyenThong.html" >Xử phạt vi phạm hành chính</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Pháp luật" href="../BTL/LeAnhPha.html/PhapLuat.html" >
+                        Pháp luật
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Hồ sơ vụ án " href="../BTL/LeAnhPha.html/PhapLuat.html" >Hồ sơ vụ án </a>
+                                </li>
+                                <li>
+                                    <a title="Tư vấn pháp luật" href="../BTL/LeAnhPha.html/PhapLuat.html" >Tư vấn pháp luật</a>
+                                </li>
+                                <li>
+                                    <a title="Ký sự pháp đình" href="../BTL/LeAnhPha.html/PhapLuat.html" >Ký sự pháp đình</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide" >
+                    <a title="Xe" href="../BTL/LeAnhPha.html/Xe.html" >
+                        Xe
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Xe mới " href="../BTL/LeAnhPha.html/Xe.html" >Xe mới </a>
+                                </li>
+                                <li>
+                                    <a title="Khám phá" href="../BTL/LeAnhPha.html/Xe.html" >Khám phá</a>
+                                </li>
+                                <li>
+                                    <a title="Sau tay lái" href="../BTL/LeAnhPha.html/Xe.html" >Sau tay lái</a>
+                                </li>
+                                <li>
+                                    <a title="Diễn đàn" href="../BTL/LeAnhPha.html/Xe.html" >Diễn đàn</a>
+                                </li>
+                                <li>
+                                    <a title="Tư vấn" href="../BTL/LeAnhPha.html/Xe.html" >Tư vấn</a>
+                                </li>
+                                <li>
+                                    <a title="Đánh giá xe " href="../BTL/LeAnhPha.html/Xe.html" >Đánh giá xe </a>
+                                </li>
+                                <li>
+                                    <a title="Giá xe" href="../BTL/LeAnhPha.html/Xe.html" >Giá xe</a>
+                                </li>
+                                <li>
+                                    <a title="Dữ liệu xe" href="../BTL/LeAnhPha.html/Xe.html" >Dữ liệu xe</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Bất động sản" href="../BTL/LeAnhPha.html/BatDongSan.html" >
+                        Bất động sản
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Dự án" href="../BTL/LeAnhPha.html/BatDongSan.html" >Dự án</a>
+                                </li>
+                                <li>
+                                    <a title="Nội thất" href="../BTL/LeAnhPha.html/BatDongSan.html" >Nội thất</a>
+                                </li>
+                                <li>
+                                    <a title="Tư vấn" href="../BTL/LeAnhPha.html/BatDongSan.html" >Tư vấn</a>
+                                </li>
+                                <li>
+                                    <a title="Thị trường" href="../BTL/LeAnhPha.html/BatDongSan.html" >Thị trường</a>
+                                </li>
+                                <li>
+                                    <a title="Nhà đẹp" href="../BTL/LeAnhPha.html/BatDongSan.html" >Nhà đẹp</a>
+                                </li>
+                                <li>
+                                    <a title="Cơ hội an cư" href="../BTL/LeAnhPha.html/BatDongSan.html" >Cơ hội an cư</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide" >
+                    <a title="Du lịch" href="../BTL/LeAnhPha.html/dulich.html" >
+                        Du lịch
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Chuyện của những dòng sông" href="/du-lich/chuyen-cua-nhung-dong-song-sk0008F1.html" >Chuyện của những dòng sông</a>
+                                </li>
+                                <li>
+                                    <a title="Đi đâu chơi đi" href="/du-lich/di-dau-choi-di" >Đi đâu chơi đi</a>
+                                </li>
+                                <li>
+                                    <a title="Ăn Ăn Uống Uống" href="/du-lich/an-uong" >Ăn Ăn Uống Uống</a>
+                                </li>
+                                <li>
+                                    <a title="Ngủ Ngủ Nghỉ Nghỉ" href="/du-lich/ngu-nghi" >Ngủ Ngủ Nghỉ Nghỉ</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+            <li class="mainNav__list-item swiper-slide">
+                    <a title="Bạn đọc" href="../BTL/LeAnhPha.html/bandoc.html" >
+                        Bạn đọc
+                    </a>
+
+                    <ul class="sub__menu">
+                                <li>
+                                    <a title="Hồi âm" href="/ban-doc/hoi-am" >Hồi âm</a>
+                                </li>
+                                <li>
+                                    <a title="Chia sẻ" href="/ban-doc/chia-se" >Chia sẻ</a>
+                                </li>
+                                <li>
+                                    <a title="Thơ" href="/ban-doc/tho" >Thơ</a>
+                                </li>
+                                <li>
+                                    <a title="Ngày mai tươi sáng" href="/ban-doc/ngay-mai-tuoi-sang" >Ngày mai tươi sáng</a>
+                                </li>
+                        
+                    </ul>
+            </li>
+    <li class="mainNav__list-item no-action">
+        <a class="btn-hamburger" href="" title="Hamburger">
+            <span class="icon-hamburger"></span>
+        </a>
+    </li>
+</ul>
+</nav>
+<body style="overflow:hidden !important; overflow-y: hidden" class="layout-popup">
+    <main>
+        <section id="main-body" class="login-page vnnid-login vnnid-loginv2">
+            <div class="container">
+                <div class="login-page-main">
+                    <div class="login-page-inner">
+                        <div class="login-page-left">
+                            <div class="mainlogin mainlogin-main">
+                                <h1>Đăng nhập</h1>
+                                <div class="vnn-login-or vnn-login-orv2 text-center">
+                                    <p style="font-size: 13px !important;">Bằng các tài khoản mạng xã hội </p>
+                                </div>
+                                <div class="graction text-center graction-social graction-socialv2">
+                                    <span class="vnn-act-logingg" id="googlelogin"></span>
+                                    <span class="vnn-act-loginap" id="applelogin"></span>
+                                </div>
+                                <div class="vnn-login-or vnn-login-orv2 text-center">
+                                    <p style="font-size: 13px !important;">Hoặc</p>
+                                </div>
+                                <div class="gremail mgt10">
+                                    <input placeholder="Email / Số điện thoại" type="text" name="UserName" autocomplete="off" id="UserName">
+                                    <i class="gremail-icon"></i>
+                                </div>
+                                <div>
+                                    <span class="text-danger" id="username-error"></span>
+                                </div>
+                                <div class="grpass">
+                                    <input placeholder="Mật khẩu" type="password" name="Password" id="Password" autocomplete="off">
+                                    <i class="far fa-eye" id="togglePassword"></i>
+                                </div>
+                                <div>
+                                    <span class="text-danger" id="password-error"></span>
+                                </div>
+                                <div class="graction mgbt20 graction-savepass mgt10">
+                                    <label for="remember-me">
+                                        <input id="remember-me" type="checkbox" name="RememberMe" value="true"> <span>Ghi nhớ đăng nhập</span>
+                                    </label>
+                                    <a class="vnn-request vnnid-forgotpassword" href="/html/quenpass.html">Quên mật khẩu?</a>
+                                </div>
+                                <div class="graction mgt10">
+                                    <button id="btn-login" type="button" class="vnn-act-login" onclick="checkLoginInfo()">Đăng nhập</button>
+                                </div>
+                                <div class="gractrequest mgt10 text-center">
+                                    <span>Chưa có tài khoản? <a class="vnnid-register" href="/html/manhinhdangnhap.html">Đăng ký</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login-page-right">
+                            <span>
+                                VietNamNet - Báo điện tử chính thống hàng đầu Việt Nam
+                                <br>
+                                <i></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function checkLoginInfo() {
+            // Lấy giá trị từ các trường nhập liệu
+            const username = document.getElementById("UserName").value.trim();
+            const password = document.getElementById("Password").value.trim();
+
+            // Khởi tạo biến để kiểm tra lỗi
+            let isValid = true;
+
+            // Xóa các thông báo lỗi cũ
+            document.getElementById("username-error").innerText = "";
+            document.getElementById("password-error").innerText = "";
+
+            // Kiểm tra tên đăng nhập (Email / Số điện thoại)
+            const emailPhonePattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$|^(0|\+84)\d{9,10}$/;
+            if (!username) {
+                document.getElementById("username-error").innerText = "* Vui lòng nhập tên đăng nhập.";
+                isValid = false;
+            } else if (!emailPhonePattern.test(username)) {
+                document.getElementById("username-error").innerText = "* Tên đăng nhập phải là email hoặc số điện thoại hợp lệ.";
+                isValid = false;
+            }
+
+            // Kiểm tra mật khẩu
+            if (!password) {
+                document.getElementById("password-error").innerText = "* Vui lòng nhập mật khẩu.";
+                isValid = false;
+            } else if (password.length < 8 || password.length > 50) {
+                document.getElementById("password-error").innerText = "* Mật khẩu phải từ 8 đến 50 ký tự.";
+                isValid = false;
+            }
+
+            // Thông báo nếu thông tin hợp lệ
+            if (isValid) {
+                alert("Đăng nhập thành công!");
+                // Thực hiện hành động đăng nhập ở đây, như gửi biểu mẫu...
+            }
+        }
+    </script>
+     <link rel="stylesheet" href="../BTL/LeAnhPha.css/style.css">
+    </head>
+    <body class="footer-0">
+        <div class="grid0">
+            <div class="grid0_row">
+                <div class="grid0__column-0">
+                    <div class="grid0__column-0-1">
+                        <ul>
+                            <li>
+                                <a title="Vietnamnet premium" href="https://vietnamnet.vn/premium">
+                                    <img style="width:100px;" src="https://vnn-res.vgcloud.vn/ResV9/images/vpremium-menu-logo.svg" alt="Vietnamnet premium">
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Chính trị" href="../BTL/LeAnhPha.html/ChinhTri.html">Chính trị</a>
+                            </li>
+                            <li>
+                                <a title="Thời sự" href="../BTL/LeAnhPha.html/ThoiSu.html">Thời sự</a>
+                            </li>
+                            <li>
+                                <a title="Kinh doanh" href="../BTL/LeAnhPha.html/KinhDoanh.html">Kinh doanh</a>
+                            </li>
+                            <li>
+                                <a title="Thể thao" href="../BTL/LeAnhPha.html/TheThao.html">Thể thao</a>
+                            </li>
+                            <li>
+                                <a title="Thế giới" href="../BTL/LeAnhPha.html/TheGioi.html">Thế giới</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid0__column-0-6">
+                        <div class="grid0__column-0-6-0">
+                            <ul>
+                                <li>
+                                    <a title="Giáo dục" href="../BTL/LeAnhPha.html/GiaoDuc.html">Giáo dục</a>
+                                </li>
+                                <li>
+                                    <a title="Giải trí" href="../BTL/LeAnhPha.html/GiaiTri.html">Giải trí</a>
+                                </li>
+                                <li>
+                                    <a title="Văn hóa" href="../BTL/LeAnhPha.html/DoiSong.html">Văn hóa</a>
+                                </li>
+                                <li>
+                                    <a title="Đời sống" href="../BTL/LeAnhPha.html/DoiSong.html">Đời sống</a>
+                                </li>
+                                <li>
+                                    <a title="Sức Khỏe" href="../BTL/LeAnhPha.html/SucKhoe.html">Sức Khỏe</a>
+                                </li>
+                                <li>
+                                    <a title="Thông tin và Truyền thông" href="../BTL/LeAnhPha.html/ThongTin&TruyenThong.html">Thông tin và Truyền thông</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="grid0__column-0-6-0">
+                            <ul>
+                                <li>
+                                    <a title="Pháp luật" href="../BTL/LeAnhPha.html/PhapLuat.html">Pháp luật</a>
+                                </li>
+                                <li>
+                                    <a title="Ô tô xe máy" href="../BTL/LeAnhPha.html/Xe.html">Ô tô xe máy</a>
+                                </li>
+                                <li>
+                                    <a title="Bất động sản" href="../BTL/LeAnhPha.html/BatDongSan.html">Bất động sản</a>
+                                </li>
+                                <li>
+                                    <a title="Du lịch" href="">Du lịch</a>
+                                </li>
+                                <li>
+                                    <a title="Bạn đọc" href="">Bạn đọc</a>
+                                </li>
+                                <li>
+                                    <a title="Tuần Việt Nam" href="">Tuần Việt Nam</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid0__column-0">
+                    <div class="grid0__column-0-4">
+                        <ul>
+                            <li>
+                                <a title="VietNamNet Hành trình Việt Nam" href="https://vietnamnet.vn/hanh-trinh-viet-nam">
+                                    <img style="width: 120px;" src="../BTL/LeAnhPha.img/vnn-logo-hanh-trinh-vn.svg" alt="VietNamNet Hành trình Việt Nam">
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Toàn Văn" href="">Toàn Văn</a>
+                            </li>
+                            <li>
+                                <a title="Công nghiệp hỗ trợ" href="">Công nghiệp hỗ trợ</a>
+                            </li>
+                            <li>
+                                <a title="Bảo vệ người tiêu dùng" href="">Bảo vệ người tiêu dùng</a>
+                            </li>
+                            <li>
+                                <a title="Thị trường tiêu dùng" href="">Thị trường tiêu dùng</a>
+                            </li>
+                            <li >
+                                <a title="Dân tộc - Tôn giáo" href="">Dân tộc - Tôn giáo</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid0__column-0-5">
+                        <ul>
+                            <li>
+                                <a title="Giảm nghèo bền vững" href="">Giảm nghèo bền vững</a>
+                            </li>
+                            <li>
+                                <a title="Nông thôn mới" href="">Nông thôn mới</a>
+                            </li>
+                            <li>
+                                <a title="Dân tộc thiểu số và miền núi" href="">Dân tộc thiểu số và miền núi</a>
+                            </li>
+                            <li>
+                                <a title="Nội dung chuyên đề" href="">Nội dung chuyên đề</a>
+                            </li>
+                            <li>
+                                <a title="English" href="">English</a>
+                            </li>
+                            <li>
+                                <a title="Talks" href="">Talks</a>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="grid0__column-0-1">
+                        <ul>
+                            <li>
+                                <a title="Hồ sơ" href="">Hồ sơ</a>
+                            </li>
+                            <li>
+                                <a title="Ảnh" href="">Ảnh</a>
+                            </li>
+                            <li>
+                                <a title="Video" href="">Video</a>
+                            </li>
+                            <li>
+                                <a title="Multimedia" href="">Multimedia</a>
+                            </li>
+                            <li>
+                                <a title="Podcast" href="">Podcast</a>
+                            </li>
+                            <li>
+                                <a title="Tin tức 24h" href="">Tin tức 24h</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer class="footers">
+        <div class="grid0">
+            <div class="grid0_row">
+                <div class="grid0__column-0">
+                    <div class="grid0__column-0-1">
+                        <h class="footers">
+                            <a href="/" title="vietnamnet">
+                                <img width="140" src="https://static.vnncdn.net/v1/logo/logoVietnamNet.svg" alt="VietNamNet">
+                            </a>
+                        </h>
+                    </div>
+                    <div class="grid0__column-0-2">
+                        <p>Cơ quan chủ quản: Trường đại học Giao Thông Vận Tải Cơ Sở 2</p>
+                        <p>Số giấy phép thực hành bởi: Cô Trần Thị Dung</p>
+                        <p style="color: dodgerblue;">Tổng biên tập: Lê Anh Pha và nhóm thực hiện</p>
+                        <button class="contact-button" style="width: 25%;">
+                            Liên hệ tòa soạn
+                        </button>
+                        <p></p>
+                        <p>Tòa soạn: 450,451 Lê Văn Việt, Tăng Nhơn Phú A, TP. Thủ Đức(Quận 9 cũ)</p>
+                        <p>Hotline: <b>0123456789</b> (8-17h) | <b>0123456789</b> (ngoài giờ HC)</p>
+                        <p>&copy; 1997 Báo VietNamNet. All rights reserved.</p>
+                    </div>
+                </div>
+                <div class="grid0__column-0">
+                    <div class="grid0__column-0-3">
+                        <button class="contact-button" >
+                            <tr>
+                                <th>Liên hệ quảng cáo</th>
+                            </tr>
+                        </button>
+                        <p></p>
+                        <p>Công ty Cổ phần Báo VietNamNet</p>
+                        <p>Hotline: <b>0123456789(Hà Nội) - 0123456789(Tp.HCM)</b></p>
+                        <p>Email: example@gmail.com</p>
+                        <p>Báo giá: <a href="http://vads.vn" target="_blank">http://vads.vn</a></p>
+                        <p>Hỗ trợ kỹ thuật: support@utc.vietnamnet.vn</p>
+                    </div>
+                    <div class="grid0__column-0-4">
+                        <p>Theo dõi VietNamNet trên</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                        <p></p>
+                        <p><a href="#">Tải ứng dụng</a> | <a href="#">Độc giả gửi bài</a></p>
+                        <p><a href="#">Tuyển dụng</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

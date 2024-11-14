@@ -1,0 +1,144 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.footer {
+    background-color: #f5f5f5;
+    padding: 10px 0;
+}
+.footer-0 {
+    background-color: #f5f5f5;
+    padding: 10px 0;
+}
+.grid0 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    align-items: flex-end;
+}
+.grid0_row {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.grid0__column-0 {
+    width: 50%;
+    padding: 0px;
+    display: flex;
+}
+.grid0__column-0-1 {
+    width: 20%;
+    padding: 0px;
+    margin-left: -50px;
+    justify-content: space-between;
+}
+.grid0__column-0-2 {
+    width: 80%;
+    padding: 0px;
+    margin-left: 40px;
+}
+.grid0__column-0-3 {
+    width: 60%;
+    padding: 0px;
+}
+.grid0__column-0-4{
+    width: 40%;
+    padding: 0px;
+}
+.grid0__column-0-6-0{
+    width: 100%;
+    padding: 0px;
+}
+.grid0__column-0-5 {
+    width: 40%;
+    margin-left: -50px;
+    margin-right: 50px;
+    padding: 0px;
+}.grid0__column-0-6 {
+    width: 80%;
+    padding: 0px;
+    margin-left: 40px;
+    display: flex;
+}
+.logo-premium {
+    -webkit-transform: translateY(-1.5px);
+    transform: translateY(-1.5px);
+    width: 90px
+}
+.grid0__column-0 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex-grow: 1;
+    justify-content: space-evenly; /* Dàn đều các mục */
+    height: 100%;
+}
+.grid0__column-0 ul li {
+    margin: 5px 0;
+    line-height: 1.8em;
+    text-align: left;
+}
+.header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.premium {
+    color: orange;
+    font-weight: bold;
+}
+p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+table {
+    margin-bottom: 10px;
+}
+th, td {
+    border-style: ridge;
+    padding: 5px;
+    text-align: left;
+}
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+}
+
+.footers a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+a {
+    text-decoration: none; /* Loại bỏ gạch chân */
+    color: black; /* Màu chữ là màu đen */
+}
+.contact-button {
+    width: 40%;
+    height: 30px;
+    flex-grow: 1;
+    background-color: gainsboro;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(71, 10, 240, 0.1);
+}
